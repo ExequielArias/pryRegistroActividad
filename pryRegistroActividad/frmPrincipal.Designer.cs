@@ -59,6 +59,7 @@
             this.ClientSize = new System.Drawing.Size(213, 187);
             this.Controls.Add(this.cmdListadoDeTareas);
             this.Controls.Add(this.cmdRegistrarTareas);
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

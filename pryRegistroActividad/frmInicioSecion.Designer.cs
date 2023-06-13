@@ -79,6 +79,7 @@
             this.cmdIngresar.Text = "Ingresar";
             this.cmdIngresar.UseVisualStyleBackColor = true;
             this.cmdIngresar.Click += new System.EventHandler(this.cmdIngresar_Click);
+            this.cmdIngresar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmdIngresar_MouseClick);
             // 
             // frmLogin
             // 
@@ -94,6 +95,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

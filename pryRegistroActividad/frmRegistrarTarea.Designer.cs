@@ -35,13 +35,13 @@
             this.cboTipoActividad = new System.Windows.Forms.ComboBox();
             this.txtDetalleActividad = new System.Windows.Forms.TextBox();
             this.mrcReunion = new System.Windows.Forms.GroupBox();
-            this.optSI = new System.Windows.Forms.RadioButton();
             this.optNO = new System.Windows.Forms.RadioButton();
+            this.optSI = new System.Windows.Forms.RadioButton();
             this.mrcTareas = new System.Windows.Forms.GroupBox();
-            this.chkRepositorio = new System.Windows.Forms.CheckBox();
-            this.chkNotasReunion = new System.Windows.Forms.CheckBox();
-            this.chkInvestigacion = new System.Windows.Forms.CheckBox();
             this.chkDebate = new System.Windows.Forms.CheckBox();
+            this.chkInvestigacion = new System.Windows.Forms.CheckBox();
+            this.chkNotasReunion = new System.Windows.Forms.CheckBox();
+            this.chkRepositorio = new System.Windows.Forms.CheckBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdBorrar = new System.Windows.Forms.Button();
             this.mrcReunion.SuspendLayout();
@@ -80,6 +80,7 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(12, 31);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
@@ -87,11 +88,13 @@
             // 
             // cboTipoActividad
             // 
+            this.cboTipoActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoActividad.FormattingEnabled = true;
             this.cboTipoActividad.Location = new System.Drawing.Point(12, 85);
             this.cboTipoActividad.Name = "cboTipoActividad";
             this.cboTipoActividad.Size = new System.Drawing.Size(200, 21);
             this.cboTipoActividad.TabIndex = 4;
+            this.cboTipoActividad.SelectedIndexChanged += new System.EventHandler(this.cboTipoActividad_SelectedIndexChanged);
             // 
             // txtDetalleActividad
             // 
@@ -112,17 +115,6 @@
             this.mrcReunion.TabStop = false;
             this.mrcReunion.Text = "Reunion";
             // 
-            // optSI
-            // 
-            this.optSI.AutoSize = true;
-            this.optSI.Location = new System.Drawing.Point(38, 31);
-            this.optSI.Name = "optSI";
-            this.optSI.Size = new System.Drawing.Size(35, 17);
-            this.optSI.TabIndex = 0;
-            this.optSI.TabStop = true;
-            this.optSI.Text = "SI";
-            this.optSI.UseVisualStyleBackColor = true;
-            // 
             // optNO
             // 
             this.optNO.AutoSize = true;
@@ -133,6 +125,17 @@
             this.optNO.TabStop = true;
             this.optNO.Text = "NO";
             this.optNO.UseVisualStyleBackColor = true;
+            // 
+            // optSI
+            // 
+            this.optSI.AutoSize = true;
+            this.optSI.Location = new System.Drawing.Point(38, 31);
+            this.optSI.Name = "optSI";
+            this.optSI.Size = new System.Drawing.Size(35, 17);
+            this.optSI.TabIndex = 0;
+            this.optSI.TabStop = true;
+            this.optSI.Text = "SI";
+            this.optSI.UseVisualStyleBackColor = true;
             // 
             // mrcTareas
             // 
@@ -147,25 +150,15 @@
             this.mrcTareas.TabStop = false;
             this.mrcTareas.Text = "Tareas";
             // 
-            // chkRepositorio
+            // chkDebate
             // 
-            this.chkRepositorio.AutoSize = true;
-            this.chkRepositorio.Location = new System.Drawing.Point(17, 31);
-            this.chkRepositorio.Name = "chkRepositorio";
-            this.chkRepositorio.Size = new System.Drawing.Size(79, 17);
-            this.chkRepositorio.TabIndex = 0;
-            this.chkRepositorio.Text = "Repositorio";
-            this.chkRepositorio.UseVisualStyleBackColor = true;
-            // 
-            // chkNotasReunion
-            // 
-            this.chkNotasReunion.AutoSize = true;
-            this.chkNotasReunion.Location = new System.Drawing.Point(17, 54);
-            this.chkNotasReunion.Name = "chkNotasReunion";
-            this.chkNotasReunion.Size = new System.Drawing.Size(97, 17);
-            this.chkNotasReunion.TabIndex = 1;
-            this.chkNotasReunion.Text = "Notas Reunion";
-            this.chkNotasReunion.UseVisualStyleBackColor = true;
+            this.chkDebate.AutoSize = true;
+            this.chkDebate.Location = new System.Drawing.Point(110, 54);
+            this.chkDebate.Name = "chkDebate";
+            this.chkDebate.Size = new System.Drawing.Size(61, 17);
+            this.chkDebate.TabIndex = 3;
+            this.chkDebate.Text = "Debate";
+            this.chkDebate.UseVisualStyleBackColor = true;
             // 
             // chkInvestigacion
             // 
@@ -177,19 +170,29 @@
             this.chkInvestigacion.Text = "Investigacion";
             this.chkInvestigacion.UseVisualStyleBackColor = true;
             // 
-            // chkDebate
+            // chkNotasReunion
             // 
-            this.chkDebate.AutoSize = true;
-            this.chkDebate.Location = new System.Drawing.Point(110, 54);
-            this.chkDebate.Name = "chkDebate";
-            this.chkDebate.Size = new System.Drawing.Size(61, 17);
-            this.chkDebate.TabIndex = 3;
-            this.chkDebate.Text = "Debate";
-            this.chkDebate.UseVisualStyleBackColor = true;
+            this.chkNotasReunion.AutoSize = true;
+            this.chkNotasReunion.Location = new System.Drawing.Point(17, 54);
+            this.chkNotasReunion.Name = "chkNotasReunion";
+            this.chkNotasReunion.Size = new System.Drawing.Size(97, 17);
+            this.chkNotasReunion.TabIndex = 1;
+            this.chkNotasReunion.Text = "Notas Reunion";
+            this.chkNotasReunion.UseVisualStyleBackColor = true;
+            // 
+            // chkRepositorio
+            // 
+            this.chkRepositorio.AutoSize = true;
+            this.chkRepositorio.Location = new System.Drawing.Point(17, 31);
+            this.chkRepositorio.Name = "chkRepositorio";
+            this.chkRepositorio.Size = new System.Drawing.Size(79, 17);
+            this.chkRepositorio.TabIndex = 0;
+            this.chkRepositorio.Text = "Repositorio";
+            this.chkRepositorio.UseVisualStyleBackColor = true;
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Location = new System.Drawing.Point(140, 432);
+            this.cmdRegistrar.Location = new System.Drawing.Point(54, 432);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(75, 23);
             this.cmdRegistrar.TabIndex = 8;
@@ -199,7 +202,7 @@
             // 
             // cmdBorrar
             // 
-            this.cmdBorrar.Location = new System.Drawing.Point(59, 432);
+            this.cmdBorrar.Location = new System.Drawing.Point(137, 432);
             this.cmdBorrar.Name = "cmdBorrar";
             this.cmdBorrar.Size = new System.Drawing.Size(75, 23);
             this.cmdBorrar.TabIndex = 9;
@@ -221,9 +224,11 @@
             this.Controls.Add(this.lblDetalleActividad);
             this.Controls.Add(this.lblTipoActividad);
             this.Controls.Add(this.lblFecha);
+            this.MaximizeBox = false;
             this.Name = "frmRegistrarTarea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Tarea";
+            this.Load += new System.EventHandler(this.frmRegistrarTarea_Load);
             this.mrcReunion.ResumeLayout(false);
             this.mrcReunion.PerformLayout();
             this.mrcTareas.ResumeLayout(false);

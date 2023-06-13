@@ -33,5 +33,16 @@ namespace pryRegistroActividad
                 MessageBox.Show("Usuario o Contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void cmdIngresar_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

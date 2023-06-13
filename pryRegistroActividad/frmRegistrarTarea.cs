@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace pryRegistroActividad
 {
+
     public partial class frmRegistrarTarea : Form
     {
         public frmRegistrarTarea()
@@ -19,7 +20,31 @@ namespace pryRegistroActividad
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            if (dtpFecha.Value >= DateTime.Today)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fecha actual o posterior a la de hoy","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpFecha .Value = DateTime.Today;
+                dtpFecha.Focus(); 
+            }
+        }
+
+        private void cboTipoActividad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmRegistrarTarea_Load(object sender, EventArgs e)
+        {
+            cboTipoActividad.Items.Add("Relevamiento");
+            cboTipoActividad.Items.Add("Propuesta");
+            cboTipoActividad.Items.Add("Diagnostico");
+            cboTipoActividad.Items.Add("Analisis");
+            cboTipoActividad.Items.Add("Diagrama de base de datos");
+            cboTipoActividad.Items.Add("Programacion");
         }
     }
 }
