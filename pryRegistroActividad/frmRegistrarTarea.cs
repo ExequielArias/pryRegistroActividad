@@ -30,13 +30,8 @@ namespace pryRegistroActividad
                 dtpFecha .Value = DateTime.Today;
                 dtpFecha.Focus(); 
             }
-        }
 
-        private void cboTipoActividad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
-
         private void frmRegistrarTarea_Load(object sender, EventArgs e)
         {
             cboTipoActividad.Items.Add("Relevamiento");
@@ -46,5 +41,12 @@ namespace pryRegistroActividad
             cboTipoActividad.Items.Add("Diagrama de base de datos");
             cboTipoActividad.Items.Add("Programacion");
         }
+
+        private void cboTipoActividad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }
