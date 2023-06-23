@@ -27,10 +27,10 @@ namespace pryRegistroActividad
                     frmPrincipal frmPrincipal = new frmPrincipal();     
                     frmPrincipal.ShowDialog();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Usuario o Contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

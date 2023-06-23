@@ -44,8 +44,10 @@
             this.chkRepositorio = new System.Windows.Forms.CheckBox();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdBorrar = new System.Windows.Forms.Button();
+            this.dgbMuestra = new System.Windows.Forms.DataGridView();
             this.mrcReunion.SuspendLayout();
             this.mrcTareas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbMuestra)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFecha
@@ -122,13 +124,13 @@
             this.optNO.Name = "optNO";
             this.optNO.Size = new System.Drawing.Size(41, 17);
             this.optNO.TabIndex = 1;
-            this.optNO.TabStop = true;
             this.optNO.Text = "NO";
             this.optNO.UseVisualStyleBackColor = true;
             // 
             // optSI
             // 
             this.optSI.AutoSize = true;
+            this.optSI.Checked = true;
             this.optSI.Location = new System.Drawing.Point(38, 31);
             this.optSI.Name = "optSI";
             this.optSI.Size = new System.Drawing.Size(35, 17);
@@ -192,7 +194,7 @@
             // 
             // cmdRegistrar
             // 
-            this.cmdRegistrar.Location = new System.Drawing.Point(54, 432);
+            this.cmdRegistrar.Location = new System.Drawing.Point(140, 432);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(75, 23);
             this.cmdRegistrar.TabIndex = 8;
@@ -202,18 +204,27 @@
             // 
             // cmdBorrar
             // 
-            this.cmdBorrar.Location = new System.Drawing.Point(137, 432);
+            this.cmdBorrar.Location = new System.Drawing.Point(59, 432);
             this.cmdBorrar.Name = "cmdBorrar";
             this.cmdBorrar.Size = new System.Drawing.Size(75, 23);
             this.cmdBorrar.TabIndex = 9;
             this.cmdBorrar.Text = "Borar";
             this.cmdBorrar.UseVisualStyleBackColor = true;
             // 
+            // dgbMuestra
+            // 
+            this.dgbMuestra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbMuestra.Location = new System.Drawing.Point(263, 31);
+            this.dgbMuestra.Name = "dgbMuestra";
+            this.dgbMuestra.Size = new System.Drawing.Size(416, 423);
+            this.dgbMuestra.TabIndex = 10;
+            // 
             // frmRegistrarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(227, 466);
+            this.ClientSize = new System.Drawing.Size(691, 466);
+            this.Controls.Add(this.dgbMuestra);
             this.Controls.Add(this.cmdBorrar);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.mrcTareas);
@@ -233,6 +244,7 @@
             this.mrcReunion.PerformLayout();
             this.mrcTareas.ResumeLayout(false);
             this.mrcTareas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbMuestra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +268,6 @@
         private System.Windows.Forms.CheckBox chkRepositorio;
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdBorrar;
+        private System.Windows.Forms.DataGridView dgbMuestra;
     }
 }

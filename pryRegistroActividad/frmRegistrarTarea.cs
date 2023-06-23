@@ -17,6 +17,8 @@ namespace pryRegistroActividad
         {
             InitializeComponent();
         }
+        string varReunion;
+        string varTareas;
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
@@ -28,9 +30,39 @@ namespace pryRegistroActividad
             {
                 MessageBox.Show("Seleccione una fecha actual o posterior a la de hoy","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dtpFecha .Value = DateTime.Today;
-                dtpFecha.Focus(); 
+                dtpFecha.Focus();
             }
 
+            if (cboTipoActividad.SelectedIndex != -1)
+            {
+                if (txtDetalleActividad.Text != "")
+                {
+                    if (optSI.Checked == true)
+                    {
+                        varReunion = "SI";
+                    }
+                    else
+                    {
+                        varReunion = "NO";
+                    }
+                    if (chkDebate.Checked == true) 
+                    {
+                       varTareas = "Debate, ";
+                    }
+                    if (chkInvestigacion.Checked == true)
+                    {
+                        varTareas = varTareas + "Investigacion, ";
+                    }
+                    if (chkNotasReunion.Checked == true)
+                    {
+                        varTareas = varTareas + "Notas Reunion, ";
+                    }
+                    if (chkRepositorio.Checked == true)
+                    {
+                        varTareas = varTareas + "Repositorio.";
+                    }
+                }
+            }
         }
         private void frmRegistrarTarea_Load(object sender, EventArgs e)
         {

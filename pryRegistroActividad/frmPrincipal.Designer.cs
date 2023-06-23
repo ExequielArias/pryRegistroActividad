@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cmdRegistrarTareas = new System.Windows.Forms.Button();
-            this.cmdListadoDeTareas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdRegistrarTareas
@@ -42,22 +41,11 @@
             this.cmdRegistrarTareas.UseVisualStyleBackColor = true;
             this.cmdRegistrarTareas.Click += new System.EventHandler(this.cmdRegistrarTareas_Click);
             // 
-            // cmdListadoDeTareas
-            // 
-            this.cmdListadoDeTareas.Location = new System.Drawing.Point(12, 92);
-            this.cmdListadoDeTareas.Name = "cmdListadoDeTareas";
-            this.cmdListadoDeTareas.Size = new System.Drawing.Size(189, 74);
-            this.cmdListadoDeTareas.TabIndex = 1;
-            this.cmdListadoDeTareas.Text = "Listado de Tareas";
-            this.cmdListadoDeTareas.UseVisualStyleBackColor = true;
-            this.cmdListadoDeTareas.Click += new System.EventHandler(this.cmdListadoDeTareas_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 187);
-            this.Controls.Add(this.cmdListadoDeTareas);
+            this.ClientSize = new System.Drawing.Size(213, 97);
             this.Controls.Add(this.cmdRegistrarTareas);
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
@@ -70,6 +58,5 @@
         #endregion
 
         private System.Windows.Forms.Button cmdRegistrarTareas;
-        private System.Windows.Forms.Button cmdListadoDeTareas;
     }
 }
