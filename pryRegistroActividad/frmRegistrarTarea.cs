@@ -61,6 +61,13 @@ namespace pryRegistroActividad
                     {
                         varTareas = varTareas + "Repositorio.";
                     }
+
+                    int n = dgbMuestra.Rows.Add();
+                    dgbMuestra.Rows[n].Cells[0].Value = dtpFecha.Text;
+                    dgbMuestra.Rows[n].Cells[1].Value = cboTipoActividad.Text;
+                    dgbMuestra.Rows[n].Cells[2].Value = txtDetalleActividad.Text;
+                    dgbMuestra.Rows[n].Cells[3].Value = varReunion;
+                    dgbMuestra.Rows[n].Cells[4].Value = varTareas;
                 }
             }
         }

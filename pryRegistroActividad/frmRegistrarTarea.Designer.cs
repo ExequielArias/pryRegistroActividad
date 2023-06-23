@@ -45,6 +45,11 @@
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.cmdBorrar = new System.Windows.Forms.Button();
             this.dgbMuestra = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDeActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DetalleActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tareas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mrcReunion.SuspendLayout();
             this.mrcTareas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbMuestra)).BeginInit();
@@ -214,16 +219,48 @@
             // dgbMuestra
             // 
             this.dgbMuestra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbMuestra.Location = new System.Drawing.Point(263, 12);
+            this.dgbMuestra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.TipoDeActividad,
+            this.DetalleActividad,
+            this.Reunion,
+            this.Tareas});
+            this.dgbMuestra.Location = new System.Drawing.Point(241, 13);
             this.dgbMuestra.Name = "dgbMuestra";
-            this.dgbMuestra.Size = new System.Drawing.Size(416, 442);
+            this.dgbMuestra.ReadOnly = true;
+            this.dgbMuestra.Size = new System.Drawing.Size(543, 442);
             this.dgbMuestra.TabIndex = 10;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // TipoDeActividad
+            // 
+            this.TipoDeActividad.HeaderText = "Tipo de actividad";
+            this.TipoDeActividad.Name = "TipoDeActividad";
+            // 
+            // DetalleActividad
+            // 
+            this.DetalleActividad.HeaderText = "Detalle Actividad";
+            this.DetalleActividad.Name = "DetalleActividad";
+            // 
+            // Reunion
+            // 
+            this.Reunion.HeaderText = "Reunion";
+            this.Reunion.Name = "Reunion";
+            // 
+            // Tareas
+            // 
+            this.Tareas.HeaderText = "Tareas";
+            this.Tareas.Name = "Tareas";
             // 
             // frmRegistrarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 466);
+            this.ClientSize = new System.Drawing.Size(800, 466);
             this.Controls.Add(this.dgbMuestra);
             this.Controls.Add(this.cmdBorrar);
             this.Controls.Add(this.cmdRegistrar);
@@ -269,5 +306,10 @@
         private System.Windows.Forms.Button cmdRegistrar;
         private System.Windows.Forms.Button cmdBorrar;
         private System.Windows.Forms.DataGridView dgbMuestra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDeActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DetalleActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Reunion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tareas;
     }
 }

@@ -22,16 +22,10 @@ namespace pryRegistroActividad
             frmRegistrarTarea registrarTareas = new frmRegistrarTarea();    
             registrarTareas.ShowDialog();
         }
-        this.Hide();
-
         private void cmdVolver_Click(object sender, EventArgs e)
         {
             frmLogin frmLogin = new frmLogin();
             frmLogin.ShowDialog();
-            
         }
     }
-
 }
-
-
