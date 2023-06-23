@@ -214,9 +214,9 @@
             // dgbMuestra
             // 
             this.dgbMuestra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbMuestra.Location = new System.Drawing.Point(263, 31);
+            this.dgbMuestra.Location = new System.Drawing.Point(263, 12);
             this.dgbMuestra.Name = "dgbMuestra";
-            this.dgbMuestra.Size = new System.Drawing.Size(416, 423);
+            this.dgbMuestra.Size = new System.Drawing.Size(416, 442);
             this.dgbMuestra.TabIndex = 10;
             // 
             // frmRegistrarTarea

@@ -54,12 +54,6 @@
     <Compile Include="frmInicioSecion.Designer.cs">
       <DependentUpon>frmInicioSecion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListadoDeTareas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListadoDeTareas.Designer.cs">
-      <DependentUpon>frmListadoDeTareas.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInicioSecion.resx">
       <DependentUpon>frmInicioSecion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListadoDeTareas.resx">
-      <DependentUpon>frmListadoDeTareas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
